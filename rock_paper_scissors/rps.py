@@ -9,7 +9,7 @@ def rock_paper_scissors(n):
     arr = [[] for i in range(0, 3**n)]
 
     def inner_recursion(n, sub_arr):
-        for i in len(0, len(options)-1):
+        for i in range(0, len(options)-1):
             sub_arr[i] = options[i]
         return sub_arr
 
