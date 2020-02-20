@@ -19,7 +19,7 @@ def eating_cookies(n, cache=None):
         return eating_cookies(n-options[0]) + eating_cookies(n-options[1]) + eating_cookies(n-options[2])
 
 
-# print(eating_cookies(3))
+print(eating_cookies(10))
 
 if __name__ == "__main__":
     if len(sys.argv) > 1:

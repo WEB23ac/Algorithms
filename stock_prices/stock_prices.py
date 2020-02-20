@@ -33,37 +33,16 @@ def find_max_profit(prices):
 
     differences = selection_sort(differences)
     return differences[len(differences)-1]
-    # print(differences)
-
-    # * iterate over zeroth through end-1 index of prices to fidn min vals
 
 
-# # * iterate over prices to find max
-    # for i in prices[1:]:
-    #     if i > highest_price:
-    #         highest_price = i
-    #         highest_price_idx = prices.index(i)
-# # * iterate over prices up to highest price, and create new array from highest_price minus current iteration value
-#     for j in prices[:highest_price_idx]:
-#         differences.append(highest_price-j)
+# print(find_max_profit([100, 90, 80, 50, 20, 10]))
+if __name__ == '__main__':
+  # This is just some code to accept inputs from the command line
+    parser = argparse.ArgumentParser(
+        description='Find max profit from prices.')
+    parser.add_argument('integers', metavar='N', type=int,
+                        nargs='+', help='an integer price')
+    args = parser.parse_args()
 
-#     # * Iterate over differences array and find largest value (similar to finding max value above). Assign profit to that value
-#     for x in differences:
-#         if x > profit:
-#             profit = x
-
-    # return profit
-
-
-print(find_max_profit([100, 90, 80, 50, 20, 10]))
-
-# if __name__ == '__main__':
-#   # This is just some code to accept inputs from the command line
-#     parser = argparse.ArgumentParser(
-#         description='Find max profit from prices.')
-#     parser.add_argument('integers', metavar='N', type=int,
-#                         nargs='+', help='an integer price')
-#     args = parser.parse_args()
-
-#     print("A profit of ${profit} can be made from the stock prices {prices}.".format(
-#         profit=find_max_profit(args.integers), prices=args.integers))
+    print("A profit of ${profit} can be made from the stock prices {prices}.".format(
+        profit=find_max_profit(args.integers), prices=args.integers))
